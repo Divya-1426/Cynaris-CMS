@@ -1,0 +1,35 @@
+    <!-- Show modal content -->
+    <div id="showModal-<?php echo e($row->id); ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"><?php echo e(__('dashboard.view')); ?> <?php echo e($title); ?></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Details View Start -->
+                    <h4><span class="text-highlight"><?php echo e(__('dashboard.title')); ?>:</span> <?php echo e($row->title); ?></h4>
+                    <h5><span class="text-highlight"><?php echo e(__('dashboard.value')); ?>:</span> <div class="btn btn-primary btn-sm"><?php echo e($row->value); ?></div></h5>
+                    <hr/>
+                    <p><span class="text-highlight"><?php echo e(__('dashboard.description')); ?>:</span> <?php echo $row->description; ?></p>
+
+                    <?php if(!empty($row->icon)): ?>
+                    <hr/>
+                    <p><span class="text-highlight"><?php echo e(__('dashboard.icon')); ?>:</span> <div class="btn btn-secondary btn-sm"><?php echo $row->icon; ?></div></p>
+                    <?php endif; ?>
+                    <hr/>
+                    <p><span class="text-highlight"><?php echo e(__('dashboard.status')); ?>:</span> 
+                    <?php if( $row->status == 1 ): ?>
+                    <span class="badge badge-success badge-pill"><?php echo e(__('dashboard.active')); ?></span>
+                    <?php else: ?>
+                    <span class="badge badge-danger badge-pill"><?php echo e(__('dashboard.inactive')); ?></span>
+                    <?php endif; ?>
+                    </p>
+                    <!-- Details View End -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal"><?php echo e(__('dashboard.close')); ?></button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal --><?php /**PATH C:\xampp\htdocs\cynaris\resources\views/admin/counter/show.blade.php ENDPATH**/ ?>

@@ -1,0 +1,32 @@
+    <!-- Show modal content -->
+    <div id="showModal-<?php echo e($row->id); ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"><?php echo e(__('dashboard.view')); ?> <?php echo e($title); ?></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Details View Start -->
+                    <h4><span class="text-highlight"><?php echo e(__('dashboard.title')); ?>:</span> <?php echo e($row->title); ?></h4>
+                    <hr/>
+                    <p><span class="text-highlight"><?php echo e(__('dashboard.meta_title')); ?>:</span> <?php echo e($row->meta_title); ?></p>
+                    <p><span class="text-highlight"><?php echo e(__('dashboard.meta_description')); ?>:</span> <?php echo $row->meta_description; ?></p>
+                    <p><span class="text-highlight"><?php echo e(__('dashboard.meta_keywords')); ?>:</span> <?php echo $row->meta_keywords; ?></p>
+
+                    <hr>
+                    <p><span class="text-highlight"><?php echo e(__('dashboard.status')); ?>:</span> 
+                    <?php if( $row->status == 1 ): ?>
+                    <span class="badge badge-success badge-pill"><?php echo e(__('dashboard.active')); ?></span>
+                    <?php else: ?>
+                    <span class="badge badge-danger badge-pill"><?php echo e(__('dashboard.inactive')); ?></span>
+                    <?php endif; ?>
+                    </p>
+                    <!-- Details View End -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal"><?php echo e(__('dashboard.close')); ?></button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal --><?php /**PATH C:\xampp\htdocs\cynaris\resources\views/admin/page-setup/show.blade.php ENDPATH**/ ?>
